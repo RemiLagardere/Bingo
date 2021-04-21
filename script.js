@@ -1,12 +1,10 @@
 let caseActive = false;
 document.querySelectorAll('.cases td').forEach(item =>{
     item.addEventListener('click', event => {
-        if(!caseActive){
+        if(!item.classList.contains('active')){
             item.classList.add('active');
-            caseActive = true;
         }else{
             item.classList.remove('active');
-            caseActive = false;
         }
     })
 })
